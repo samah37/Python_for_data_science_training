@@ -2,6 +2,13 @@
 
 # Press Maj+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings
+'''
+To install any library from those:
+  pip install ["the name of your library"]
+  example:
+  pip install pandas
+
+'''
 ## for data
 import pandas as pd
 import numpy as np
