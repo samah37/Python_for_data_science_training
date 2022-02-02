@@ -6,6 +6,7 @@ import numpy as np
 from math import sqrt
 from random import randrange
 from random import seed
+from csv import reader
 #Calculate distance between two vectors function
 def euclidean_distance(row1, row2):
     distance=0.0
@@ -74,6 +75,20 @@ n_epochs = 10
 n_codebooks = 2
 codebooks = train_codebooks(dataset, n_codebooks, learn_rate, n_epochs)
 print('Codebooks: %s' % codebooks)
+def load_csv(filename):
+    dataset = list()
+    with open(filename, 'r') as file:
+        csv_reader = reader(file)
+        for row in csv_reader:
+            if not row:
+                continue
+            dataset.append(row)
+        return dataset
+def str_column_to_float(dataset, column):
+    for row in dataset:
+        row[column]= float(row[column].strip())
+
+
 
 
 
